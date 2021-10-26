@@ -3,8 +3,8 @@ Pierwsze liczby PG1
 """
 
 while 1:
-    n = int(input("Wpisz liczbe do sprawdzenia: "))
-    if n > 1:
+    m = int(input("Wpisz liczbe do sprawdzenia: "))
+    if m > 1:
         break
 
 t = True
@@ -20,8 +20,8 @@ while lp < n:
         d = d + 1
     if t:
         #print(p)
-        if m == lp:
-            print(f"{m} jest lizcbą pierwszą")
+        if p == m:
+            print(f"{p} jest lizcbą pierwszą")
             break
         lp = lp + 1
     p = p + 1
