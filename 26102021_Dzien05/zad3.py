@@ -1,2 +1,2 @@
 tesxt = "123456"
-print(tesxt.count())
+print(tesxt.split())
