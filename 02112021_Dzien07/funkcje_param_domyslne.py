@@ -20,4 +20,3 @@ print(nowy_pracownik("Ala", "Nowaczkiewicz", ))
 print(nowy_pracownik("Marta", "Błoch"))
 print(nowy_pracownik("Karta", "Włoch", email="kura@kfc.com"))
 print(nowy_pracownik("Brunon", "Italy", email="kura@kfc.com", tel="74555"))
-
