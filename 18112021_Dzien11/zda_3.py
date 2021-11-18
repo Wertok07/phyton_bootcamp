@@ -7,7 +7,7 @@ Przykład użycia:
 """
 
 
-def policz_znaki(text, o="<", c=">"):
+def policz_znaki2(text, o="<", c=">"):
     stri = ""
 
     start = set()
@@ -25,8 +25,6 @@ def policz_znaki(text, o="<", c=">"):
     print(start)
     print(stop)
 
-
-
     for ii, tt in enumerate(range(start, stop)):
         if ii == 0:
             continue
@@ -37,9 +35,43 @@ def policz_znaki(text, o="<", c=">"):
         dl = policz_znaki(stri, o, c)
         return len(stri) + dl
 
+
+def policz_znaki(tekst, start="<", stop=">"):
+    licznik = 0
+    poziom = 0
+    for znak in tekst:
+        if znak == start:
+            poziom += 1
+        elif znak == stop:
+            poziom -= 1
+        else:
+            licznik += poziom
+    return licznik
+
+
 print(policz_znaki('ala ma [kota [a kot]] ma [ale]', '[', ']'))
+
 
 def test_funkcji():
     assert policz_znaki('ala ma <kota> a kot ma ale') == 4
     assert policz_znaki('ala ma [kota [a kot]] ma [ale]', '[', ']') == 18
     assert policz_znaki('a <a<a<a>>>') == 6
+
+
+def test_policz_znaki_dla_pustego_napisu():
+    assert policz_znaki("") == 0
+
+
+def test_policz_znaki_jeden_poziom():
+    assert policz_znaki("<a>") == 1
+
+
+def test_policz_znaki_wiele_poziomow():
+    assert policz_znaki("<<a>>") == 2
+    assert policz_znaki("<a<a>>") == 3
+    assert policz_znaki("<a<b<c>>>") == 6
+
+
+def test_policz_znaki_niestandardowe_znaczniki():
+    assert policz_znaki("<a<b<c>>>", "[", "]") == 0
+    assert policz_znaki("[a[b[c]]]", "[", "]") == 6
