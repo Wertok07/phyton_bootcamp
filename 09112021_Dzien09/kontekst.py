@@ -15,7 +15,7 @@ with open("test.bin", "wb") as fd:
     fd.flush()
 
 """
-Zadanie domowe - napisać funckcje ktora kopiuje plik
+Zadanie domowe - napisać funckcje ktora kopiuje plik (w osobnym pliku)
 """
 
 def copy(src, dst):
