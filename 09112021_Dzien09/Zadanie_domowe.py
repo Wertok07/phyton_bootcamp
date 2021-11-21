@@ -7,8 +7,13 @@ def copy(src: str, dst: str) -> str:
 """
 
 def copy(src, dst):
-    with open(src, "wb") as srcfd, open(dst, "wb") as dstfd:
-        pass
+    if src == dst:
+        return "Pliki mają taką samą nazwe. Nie mogą miec!"
+    with open(src, "rt") as srcfd, open(dst, "wt") as dstfd:
+        for i in srcfd:
+            dstfd.writelines(i.strip()+"\n")
+    return "Udało sie, plik skopiowany!"
     # src - plik zrodlowy
     # dst - plik docelowy
-    pass
+
+print(copy("text.txt","tes.txt"))
