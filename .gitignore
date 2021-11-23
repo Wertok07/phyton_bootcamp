@@ -2,3 +2,4 @@ venv/
 .idea/
 __pycache__/
 /09112021_Dzien09/tes.txt
+/18112021_Dzien11/.pytest_cache/
