@@ -13,7 +13,7 @@ class Car:
             self.level -= level
             print("Pozostało:", self.level)
         else:
-            print("Nie masz bateri")
+            print("Nie masz baterii")
 
     def charge(self):
         self.level += 100
