@@ -12,8 +12,10 @@ class Document:
 
     def render(self):
         plik = ""
-        for element in self.lista:
-            plik += element.render() + "\n"
+        with open("text.md", "wt") as fd:
+            for element in self.lista:
+                plik += element.render() + "\n"
+                fd.writelines(element.render() + "\n")
 
         return print(plik)
 
@@ -44,4 +46,4 @@ document = Document()
 document.add_element(HeaderElement('Header'))
 document.add_element(LinkElement('ABC', 'abc.com'))
 document.add_element(Element('Simple'))
-print(document.render())
+document.render()
