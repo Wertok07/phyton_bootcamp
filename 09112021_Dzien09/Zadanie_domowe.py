@@ -9,11 +9,9 @@ def copy(src: str, dst: str) -> str:
 def copy(src, dst):
     if src == dst:
         return "Pliki mają taką samą nazwe. Nie mogą miec!"
-    with open(src, "rt") as srcfd, open(dst, "wt") as dstfd:
+    with open(src, "rb") as srcfd, open(dst, "wb") as dstfd:
         for i in srcfd:
-            dstfd.writelines(i.strip()+"\n")
+            dstfd.write(i)
     return "Udało sie, plik skopiowany!"
-    # src - plik zrodlowy
-    # dst - plik docelowy
 
-print(copy("text.txt","tes.txt"))
+print(copy("text.txt","grudzien.txt"))
