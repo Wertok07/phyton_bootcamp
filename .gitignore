@@ -1,6 +1,6 @@
 venv/
 .idea/
 __pycache__/
-/09112021_Dzien09/tes.txt
-/18112021_Dzien11/.pytest_cache/
+/Dzien09_09112021/tes.txt
+/Dzien11_18112021/.pytest_cache/
 /.pytest_cache/

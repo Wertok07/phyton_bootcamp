@@ -3,8 +3,8 @@ Operacje "wysokopoziomowe" na plikach/katalogach i wyszukiwanie
 """
 import glob, shutil
 
-#files = glob.glob("/Users/Macbook/PycharmProjects/phyton_bootcamp/09112021_Dzien09/*.txt")
-#files = glob.glob("../09112021_Dzien09/*.txt")
+#files = glob.glob("/Users/Macbook/PycharmProjects/phyton_bootcamp/Dzien09_09112021/*.txt")
+#files = glob.glob("../Dzien09_09112021/*.txt")
 #files = glob.glob("../??122021_Dzien??/*")
 import os.path
 

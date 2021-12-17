@@ -23,6 +23,6 @@ def copy_tree(src, des):
         else:
             copy(sciezka_src, sciezka_des)
 
-copy_tree("/Users/Macbook/PycharmProjects/phyton_bootcamp/09122021_Dzien16/srcfolder", "/Users/Macbook/PycharmProjects/phyton_bootcamp/09122021_Dzien16/desfolder")
+copy_tree("/Dzien16_09122021/srcfolder", "/Users/Macbook/PycharmProjects/phyton_bootcamp/Dzien16_09122021/desfolder")
 
 
